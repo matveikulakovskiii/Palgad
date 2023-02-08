@@ -1,10 +1,10 @@
 from module1 import *
 palgad=[1200,2500,750,395,1200]
-inimesed=["A","B","C","D","A"]
+inimesed=["A","B","C","D","F"]
 while True:
     print(inimesed)
     print(palgad)
-    menu=int(input("Valik:\n 1-lisa andmed\n2=Kustuta andmed\n3=Suurim palk\n4=Lühim palk\n5=Sorteerimine\n"))
+    menu=int(input("Valik:\n 1-lisa andmed\n2=Kustuta andmed\n3=Suurim palk\n4=Lühim palk\n5=Sorteerimine\n6=Võrdsed palgad\n"))
     if menu==0:
         break 
     elif menu==1:

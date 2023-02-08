@@ -78,9 +78,14 @@ def sorteerimine(i:list,p:list):
     return i,p
 
 def vordsed_palgad(i:list,p:list):
-    m=[]
+
     dublikatid=[x for x in p if p.count(x)>1]
     dublikatid=list(set(dublikatid))
-    m.append(dublikatid)
-    print(m)
-    return dublikatid
+    for palk in dublikatid:
+        n=p.count(palk)
+        k=-1
+        print(f"{palk} saavad kätte järgmised inimesed: ")
+        for j in range (n):
+            k=p.index(palk,k+1)
+            nimi=i[k]
+            print(nimi)
