@@ -33,14 +33,14 @@ while True:
         iniemsed,palgad=imja(inimesed,palgad)
     elif menu==8:
         amount = int(input("Sisestage summa, millega võrrelda: "))
-        more_than = disp(palgad, inimesed, amount, "suurim")
-        less_than = disp(palgad, inimesed, amount, "vähem")
+        more_than = suurim_vahem(palgad, inimesed, amount, "suurim")
+        less_than = suurim_vahem(palgad, inimesed, amount, "vähem")
         print(f"Inimesed, kellel on palk rohkem kui {amount}:", more_than)
         print(f"Inimesed, kelle palk on väiksem kui {amount}:", less_than)
     elif menu==9:
         top(inimesed,palgad)
     elif menu==10:
-        kesk(inimesed,palgad)
+        keskmine(inimesed,palgad)
     elif menu==11:
         tulu(inimesed,palgad)
     elif menu==12:
@@ -48,11 +48,11 @@ while True:
     elif menu==13:
         inimesed,palgad=Kustuta(inimesed,palgad)
     elif menu==14:
-        inimesed,palgad=tint(inimesed,palgad)
+        inimesed,palgad=intform(inimesed,palgad)
     elif menu==15:
-        inimesed,palgad=year(inimesed,palgad)
+        inimesed,palgad=aasta(inimesed,palgad)
     elif menu==16:
-        inimesed=vahetanimikolmandale(inimesed)
+        inimesed=vahkolm(inimesed)
     elif menu==17:
         inimesed,palgad=boonus(inimesed,palgad)
     else:

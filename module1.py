@@ -108,7 +108,7 @@ def imja(i:list,p:list):
         print(f'{nimi} saab {p[ind]} \n')
     return i,p
 
-def disp(palgad, inimesed, amount, compare):
+def suurim_vahem(palgad, inimesed, amount, compare):
     result = []
     for i in range(len(palgad)):
         if compare == "suurim" and palgad[i] > amount:
@@ -131,7 +131,7 @@ def top(i:list,p:list):
         kopia.pop(ind)
         kopia.insert(ind,min(p)+1)
 
-def kesk(i:list,p:list): 
+def keskmine(i:list,p:list): 
     kesk=sum(p)/len(p)
     print(f"Keskmine palk on {kesk}")
     for j in range(len(i)):
@@ -210,7 +210,7 @@ def Kustuta(i:list,p:list):
                 i.pop(ind)
     return i,p
 
-def tint(i:list,p:list):
+def intform(i:list,p:list):
 
     for j in range(0,len(i)):
         i[j]=i[j].title()
@@ -218,13 +218,13 @@ def tint(i:list,p:list):
         p[j]=int(p[j])
     return i,p
 
-def year(i:list,p:list):
+def aasta(i:list,p:list):
     T = int(input('Mitu aastat? '))
     for j in range(len(p)):
         p[j] = p[j] * 1.05 ** T
     return i,p
 
-def vahetanimikolmandale(lst):
+def vahkolm(lst):
     for i in range(2, len(lst), 3):
         uusnimi = input(f"Millise nimele vahetada {lst[i]}? ")
         lst[i] = uusnimi
@@ -235,24 +235,3 @@ def boonus(i:list,p:list):
     for j in range(len(p)):
         p[j] = p[j] + T
     return i,p
-
-
-def Kustuta(i:list,p:list):
-    kesk_palk=sum(p)/len(p)
-    print(kesk_palk)
-    v=int(input("palk 1-suurem,2-väiksem? "))
-    if v==1:
-        for palk in p:
-            if palk>kesk_palk:
-                ind=p.index(palk)
-                p.remove(palk)
-                i.pop(ind)
-    else:
-        for palk in p:
-            if palk<kesk_palk:
-                ind=p.index(palk)
-                p.remove(palk)
-                i.pop(ind)
-    return i,p
-
- 
