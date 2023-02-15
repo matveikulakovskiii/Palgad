@@ -229,9 +229,3 @@ def vahkolm(lst):
         uusnimi = input(f"Millise nimele vahetada {lst[i]}? ")
         lst[i] = uusnimi
     return lst
-
-def boonus(i:list,p:list):
-    T = int(input('Palju boonus on? '))
-    for j in range(len(p)):
-        p[j] = p[j] + T
-    return i,p
