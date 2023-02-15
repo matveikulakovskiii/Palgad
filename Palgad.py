@@ -53,7 +53,5 @@ while True:
         inimesed,palgad=aasta(inimesed,palgad)
     elif menu==16:
         inimesed=vahkolm(inimesed)
-    elif menu==17:
-        inimesed,palgad=boonus(inimesed,palgad)
     else:
         print("Kirjuta õige arv")
